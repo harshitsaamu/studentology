@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/head_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/professor_stephhen_hawking_has_passed_away_at_the_age_of_76"
+            android:textColor="#000"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/author_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/by_unknownuser_12_hours_ago"
+            android:textColor="#464545" />
+
+        <TextView
+            android:id="@+id/Topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="in Science Technology"
+            android:textColor="#3d3c3c" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginTop="18dp"
+            android:background="#484747" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

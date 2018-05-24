@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/bookmark_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result_announced"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/notification_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/secondary_line_text_lorem_ipsum_dolor_sit_amet_condfsueer_adipiscing_elit_nam"
+            android:textColor="#4e4e4e"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bookmark_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/ic_bookmark_border_black_24dp" />
+</RelativeLayout>

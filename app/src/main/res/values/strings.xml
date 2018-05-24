@@ -4,4 +4,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="professor_stephhen_hawking_has_passed_away_at_the_age_of_76">Professor Stephhen Hawking has passed away at the age of 76</string>
+    <string name="by_unknownuser_12_hours_ago">by unknownUser | 12 hours ago</string>
+    <string name="result_announced">Result Announced</string>
+    <string name="secondary_line_text_lorem_ipsum_dolor_sit_amet_condfsueer_adipiscing_elit_nam">Secondary line text Lorem ipsum dolor sit amet, condfsueer adipiscing elit. Nam</string>
 </resources>
