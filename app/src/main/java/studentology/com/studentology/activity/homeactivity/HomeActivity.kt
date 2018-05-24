@@ -2,34 +2,41 @@ package studentology.com.studentology.activity.homeactivity
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
 import studentology.com.studentology.R
+import studentology.com.studentology.fragment.`fun`.FragmentFun
+import studentology.com.studentology.fragment.education.FragmentEducation
+import studentology.com.studentology.fragment.home.FragmentHome
 
 class HomeActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        var selectedFragment: Fragment? = null
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
-                return@OnNavigationItemSelectedListener true
+                selectedFragment = FragmentHome()
             }
             R.id.navigation_dashboard -> {
-                message.setText(R.string.title_dashboard)
-                return@OnNavigationItemSelectedListener true
+                selectedFragment = FragmentEducation()
             }
             R.id.navigation_notifications -> {
-                message.setText(R.string.title_notifications)
-                return@OnNavigationItemSelectedListener true
+                selectedFragment = FragmentFun()
             }
         }
-        false
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_layout, selectedFragment)
+        transaction.commit()
+        true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_layout, FragmentHome())
+        transaction.commit()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 }
