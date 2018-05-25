@@ -18,10 +18,13 @@ class HomeActivity : AppCompatActivity() {
             R.id.navigation_home -> {
                 selectedFragment = FragmentHome()
             }
-            R.id.navigation_dashboard -> {
+            R.id.navigation_education -> {
                 selectedFragment = FragmentEducation()
             }
-            R.id.navigation_notifications -> {
+            R.id.navigation_fun -> {
+                selectedFragment = FragmentFun()
+            }
+            R.id.navigation_profile -> {
                 selectedFragment = FragmentFun()
             }
         }

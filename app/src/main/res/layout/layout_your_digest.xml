@@ -15,7 +15,8 @@
             android:layout_height="wrap_content"
             android:text="@string/professor_stephhen_hawking_has_passed_away_at_the_age_of_76"
             android:textColor="#000"
-            android:textSize="18dp" />
+            android:textStyle="bold"
+            android:textSize="16dp" />
 
         <TextView
             android:id="@+id/author_date"
