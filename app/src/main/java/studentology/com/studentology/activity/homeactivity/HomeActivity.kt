@@ -1,11 +1,13 @@
 package studentology.com.studentology.activity.homeactivity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
 import studentology.com.studentology.R
+import studentology.com.studentology.activity.notifications.NotificationActivity
 import studentology.com.studentology.fragment.`fun`.FragmentFun
 import studentology.com.studentology.fragment.education.FragmentEducation
 import studentology.com.studentology.fragment.home.FragmentHome
@@ -26,6 +28,8 @@ class HomeActivity : AppCompatActivity() {
             }
             R.id.navigation_profile -> {
                 selectedFragment = FragmentFun()
+                val i=Intent(this,NotificationActivity::class.java)
+                startActivity(i)
             }
         }
         val transaction = supportFragmentManager.beginTransaction()

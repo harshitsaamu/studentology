@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="4dp"
-        android:layout_toStartOf="@+id/bookmark_icon"
         android:orientation="vertical">
 
         <TextView
@@ -31,7 +30,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/bookmark_icon"
+        android:id="@+id/notication_bookmark_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

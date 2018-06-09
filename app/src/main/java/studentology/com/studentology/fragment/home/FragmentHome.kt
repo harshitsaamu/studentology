@@ -1,11 +1,10 @@
 package studentology.com.studentology.fragment.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
@@ -14,12 +13,16 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_home.*
 import studentology.com.studentology.R
-import studentology.com.studentology.activity.homeactivity.HomeActivity
+import studentology.com.studentology.activity.notifications.NotificationActivity
 
 
 class FragmentHome : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):
-            View? = inflater.inflate(R.layout.fragment_home, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val layout: View = inflater.inflate(R.layout.fragment_home, container, false)
+        setHasOptionsMenu(true)
+        toolbarHome.inflateMenu(R.menu.home_menu)
+        return layout
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,10 +33,8 @@ class FragmentHome : Fragment() {
         posterRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val imageArray: ArrayList<String> = ArrayList()
-                var i = 1
                 for (imageSnapshot: DataSnapshot in dataSnapshot.children) {
                     imageArray.add(imageSnapshot.getValue(String::class.java)!!)
-                    i++
                 }
                 setAdapter(imageArray)
             }
@@ -57,6 +58,25 @@ class FragmentHome : Fragment() {
             }
         })
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.home_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        val id = item?.itemId
+        when (id) {
+            R.id.notification_menu -> {
+                Toast.makeText(requireContext(), "this activity", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(requireContext(), NotificationActivity::class.java))
+            }
+            else -> {
+                Toast.makeText(requireContext(), "this activity", Toast.LENGTH_SHORT).show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun setDigestAdapter(dataArray: ArrayList<String>) {
