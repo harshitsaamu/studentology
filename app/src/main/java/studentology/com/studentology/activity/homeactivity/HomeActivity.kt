@@ -11,6 +11,7 @@ import studentology.com.studentology.activity.notifications.NotificationActivity
 import studentology.com.studentology.fragment.`fun`.FragmentFun
 import studentology.com.studentology.fragment.education.FragmentEducation
 import studentology.com.studentology.fragment.home.FragmentHome
+import studentology.com.studentology.fragment.profile.FragmentProfile
 
 class HomeActivity : AppCompatActivity() {
 
@@ -27,8 +28,8 @@ class HomeActivity : AppCompatActivity() {
                 selectedFragment = FragmentFun()
             }
             R.id.navigation_profile -> {
-                selectedFragment = FragmentFun()
-                val i=Intent(this,NotificationActivity::class.java)
+                selectedFragment = FragmentProfile()
+                val i = Intent(this, NotificationActivity::class.java)
                 startActivity(i)
             }
         }

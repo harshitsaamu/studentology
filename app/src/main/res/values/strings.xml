@@ -9,7 +9,6 @@
     <string name="result_announced">Result Announced</string>
     <string name="secondary_line_text_lorem_ipsum_dolor_sit_amet_condfsueer_adipiscing_elit_nam">Secondary line text Lorem ipsum dolor sit amet, condfsueer adipiscing elit. Nam</string>
     <string name="your_digest">Your digest</string>
-    <string name="notifications">Notifications</string>
     <string name="app_logo">App Logo</string>
     <string name="studentology">Studentology</string>
     <string name="enlighten_your_mind">Enlighten your mind</string>
@@ -110,4 +109,9 @@
     <string name="bookmarks">Bookmarks</string>
     <string name="Harshit">Harshit Gupta</string>
     <string name="contact_us">Contact Us</string>
+    <string name="notifications">Notifications</string>
+    <string name="partner_with_us">Partner with us</string>
+    <string name="reminders">Reminders</string>
+    <string name="professor_stephen_hawking_has_away_at_the_age_of_76">Professor Stephen Hawking has away at the age of 76</string>
+    <string name="in_science_technology">in science technology</string>
 </resources>

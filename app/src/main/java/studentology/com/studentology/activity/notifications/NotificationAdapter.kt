@@ -33,7 +33,6 @@ class NotificationAdapter(private val context: Context, private val notification
                 else -> {
                     itemView.notication_bookmark_icon.setImageResource(R.drawable.ic_bookmark_border_black_24dp)
                 }
-
             }
         }
     }

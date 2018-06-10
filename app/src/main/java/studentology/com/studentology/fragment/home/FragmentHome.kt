@@ -90,4 +90,9 @@ class FragmentHome : Fragment() {
         main_posters.setHasFixedSize(false)
         main_posters.adapter = PosterAdapter(requireContext(), imageArray)
     }
+
+    override fun onPause() {
+        super.onPause()
+        super.onDestroy()
+    }
 }
